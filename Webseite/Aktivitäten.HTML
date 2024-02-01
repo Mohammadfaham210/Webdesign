@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unsere Aktivitäten mit den Kindern - Deutsches Rotes Kreuz</title>
+    <style>
+        /* Grundlegende Styles, ähnlich zu Ihrer Vorlage */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .header, .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #d52b1e;
+            color: white;
+        }
+
+        /* Navigationsstil, konsistent mit Ihrer Vorlage */
+        nav {
+            background-color: #d52b1e;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Stil für das Kommentarfeld */
+        textarea {
+            height: 150px; /* Höhe des Kommentarfelds */
+            resize: vertical; /* Ermöglicht vertikale Größenänderung */
+        }
+
+        /* Stil für Checkboxen und Labels */
+        .checkbox-container {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Stil für Buttons */
+        button {
+            background-color: #d52b1e; /* Farbe */
+            color: white; /* Textfarbe */
+            padding: 14px 20px; /* Polsterung */
+            margin: 8px 0; /* Abstand */
+            border: none; /* Kein Rand */
+            cursor: pointer; /* Mauszeiger-Stil */
+            width: 100%; /* Volle Breite */
+        }
+
+
+        button:hover {
+            background-color: #b0241a; /* Dunkleres Rot für Hover-Effekt */
+        }
+
+        /* Stil für das Popup-Fenster */
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%; /* Breite des Popups */
+            max-width: 600px; /* Maximale Breite */
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 9;
+            max-width: 600px; /* Maximale Breite */
+        }
+
+    /* Stil für Formularfelder */
+    input[type=text], input[type=date], input[type=tel], input[type=email], select, textarea {
+            width: 95%; /* Breite der Felder */
+            padding: 12px 20px; /* Polsterung */
+            margin: 8px 0; /* Abstand zwischen Feldern */
+            display: inline-block; /* Anzeigeart */
+            border: 1px solid #ccc; /* Rand */
+            border-radius: 4px; /* Eckenradius */
+            box-sizing: border-box; /* Box-Modell */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigationsbereich -->
+    <nav>
+        <h1>DRK</h1>
+        <a href="Hauptseite.html">Zurück zur Hauptseite</a>
+    </nav>
+
+    <div class="header">
+        <h1>Unsere Aktivitäten mit den Kindern</h1>
+    </div>
+
+    <div class="container">
+        <!-- Inhalt der Seite: Beschreibung der Aktivitäten -->
+        <article>
+            <p>Bei DRK glauben wir fest daran, dass das Heranwachsen mehr bedeutet als nur Lernen und Spielen. Es geht darum, Erfahrungen zu sammeln, die für das ganze Leben prägen. Unsere sorgfältig konzipierten Aktivitäten für Kinder und Jugendliche aller Altersstufen und Hintergründe bieten genau das – eine Chance, zu lernen, zu lachen und lebenslange Freundschaften zu knüpfen.</p>
+
+            <p>Als engagierte Übungsleiter sind wir stolz darauf, ein breites Spektrum an Aktivitäten anzubieten, die nicht nur unterhaltsam, sondern auch bildend sind. Von kreativen Workshops bis hin zu aufregenden Ausflügen in andere Städte – bei uns gibt es immer etwas Neues zu entdecken. Unsere Programme sind speziell darauf ausgerichtet, Spaß und Lernen miteinander zu verbinden, damit jedes Kind und jeder Jugendliche wertvolle Erfahrungen sammeln kann.</p>
+
+            <p>Ein besonderes Anliegen ist uns der kulturelle Austausch. In unserer vielfältigen Gruppe haben Kinder die Möglichkeit, sich mit Gleichaltrigen aus verschiedenen Kulturen zu treffen und Freundschaften zu schließen. Diese Interaktion fördert nicht nur die Toleranz und das Verständnis für andere Kulturen, sondern bereichert auch die persönliche Entwicklung jedes Einzelnen.</p>
+
+            <p>Wir verstehen, dass jedes Kind einzigartig ist, und bemühen uns, ein inklusives und unterstützendes Umfeld zu schaffen, in dem sich jedes Kind wertgeschätzt und verstanden fühlt. Unsere Aktivitäten sind so gestaltet, dass sie die individuellen Stärken und Interessen jedes Teilnehmers berücksichtigen und fördern.</p>
+
+            <p>Unsere Ausflüge in andere Städte sind nicht nur lehrreich, sondern bieten auch eine wunderbare Gelegenheit, neue Orte zu entdecken und gemeinsame Erinnerungen zu schaffen. Diese Erfahrungen stärken das Gemeinschaftsgefühl und fördern die Selbstständigkeit der Jugendlichen.</p>
+
+            <p>Wir laden Sie und Ihre Kinder herzlich ein, Teil unserer Gemeinschaft zu werden. Ob Ihr Kind sich für Kunst, Wissenschaft, Sport oder Kultur interessiert – bei uns findet es einen Platz, um seine Leidenschaften zu erkunden und neue Freunde zu finden. Melden Sie Ihr Kind noch heute an und lassen Sie es Teil dieser wunderbaren Reise werden!</p>
+        </article>
+
+
+
+ <!-- Anmeldebutton -->
+ <button onclick="openPopup()">Für Aktivitäten anmelden</button>
+
+ <!-- Popup-Fenster für Anmeldeformular -->
+ <div id="anmeldePopup" class="popup">
+     <h2>Anmeldeformular</h2>
+     <form>
+        <input type="text" id="name" name="name" placeholder="Vorname">
+        <input type="text" id="nachname" name="nachname" placeholder="Nachname">
+        <input type="tel" id="telefon" name="telefon" placeholder="Telefonnummer">
+        <input type="email" id="email" name="email" placeholder="E-Mail-Adresse">
+        <input type="text" id="adresse" name="adresse" placeholder="Adresse">
+        <input type="date" id="geburtstag" name="geburtstag" placeholder="Geburtsdatum">
+        
+        <select id="geschlecht" name="geschlecht">
+            <option value="">Geschlecht auswählen</option>
+            <option value="weiblich">Weiblich</option>
+            <option value="männlich">Männlich</option>
+            <option value="divers">Divers</option>
+
+            
+        </select>
+        
+        <select id="aktivitaet" name="aktivitaet">
+            <option value="">Aktivität auswählen</option>
+            <option value="sport">Sport</option>
+            <option value="kunst">Kunst</option>
+            <option value="musik">Musik</option>
+            <!-- Weitere Optionen nach Bedarf -->
+        </select>
+        
+        <textarea id="kommentar" name="kommentar" placeholder="Zusätzliche Informationen (optional)"></textarea>
+        
+        <div class="checkbox-container">
+            <input type="checkbox" id="datenschutz" name="datenschutz">
+            <label for="datenschutz">Ich stimme den Datenschutzrichtlinien zu</label>
+        </div>
+        <button type="button" onclick="submitForm()">Bestätigen</button>
+    </form>
+    
+ </div>
+</div>
+
+
+    </div>
+
+    <div class="footer">
+        <p>© 2024 Deutsches Rotes Kreuz</p>
+    </div>
+
+    <script>
+        function openPopup() {
+            document.getElementById("anmeldePopup").style.display = "block";
+        }
+        function submitForm() {
+    var datenschutz = document.getElementById("datenschutz").checked;
+    if (!datenschutz) {
+        alert("Bitte akzeptieren Sie die Datenschutzrichtlinien.");
+        return;
+    }
+
+    var dankesfenster = window.open("", "Dankesfenster", "width=400,height=200");
+    dankesfenster.document.write("<p>Danke für die Anmeldung. Wir werden uns bald bei Ihnen melden.</p>");
+    dankesfenster.document.close();
+
+    document.getElementById("anmeldePopup").style.display = "none";
+}
+
+    </script>
+</body>
+</html>
