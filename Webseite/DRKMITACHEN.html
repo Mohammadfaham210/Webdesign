@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engagieren Sie sich beim Deutschen Roten Kreuz</title>
+    <style>
+        /* Grundlegende Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        .container, .modal-content {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .header, .footer, .modal-header, .modal-footer {
+            text-align: center;
+            padding: 20px;
+        }
+        .header, .modal-header {
+            background-color: #d52b1e;
+            color: white;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .modal-content {
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 5px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover, .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Button Styles */
+        .modal-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #d52b1e;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .modal-button:hover {
+            background-color: #b0241e;
+        }
+
+        /* Navigationsstil */
+        nav {
+            background-color: #d52b1e;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigationsbereich -->
+    <nav>
+        <h1>DRK</h1>
+        <a href="DRK22.html">Hauptseite</a> <!-- Ersetzen Sie 'index.html' mit dem Namen Ihrer Hauptseitendatei -->
+    </nav>
+
+    <div class="header">
+        <h1>Mitmachen beim Deutschen Roten Kreuz</h1>
+        <button id="openModal">Engagement-Optionen anzeigen</button>
+    </div>
+
+    <div class="container">
+        <p>Hier können Sie mehr über die vielfältigen Möglichkeiten des Engagements beim DRK erfahren, von ehrenamtlicher Arbeit bis hin zu Ausbildungsmöglichkeiten.</p>
+    </div>
+
+    <!-- Modal-Fenster für Engagement-Optionen -->
+    <div id="engagementModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Engagement beim DRK</h2>
+            </div>
+            <div class="modal-body">
+                <button class="modal-button" onclick="location.href='URL_Ehrenamt'">Ehrenamtliche Tätigkeit</button>
+                <button class="modal-button" onclick="location.href='URL_Blutspenden'">Blutspenden</button>
+                <button class="modal-button" onclick="location.href='URL_Mitgliedschaft'">Mitglied werden</button>
+                <button class="modal-button" onclick="location.href='URL_Ausbildung'">Ausbildung und Weiterbildung</button>
+            </div>
+            <div class="modal-footer">
+                <h3>DRK - Gemeinsam stark</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Vielen Dank für Ihr Interesse am Deutschen Roten Kreuz!</p>
+    </div>
+
+    <script>
+        // JavaScript für das Modal
+        var modal = document.getElementById("engagementModal");
+        var btn = document.getElementById("openModal");
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
