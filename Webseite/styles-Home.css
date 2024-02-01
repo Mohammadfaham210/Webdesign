@@ -1,0 +1,70 @@
+body {
+    background-size: conover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center ; /* Zentriert das Bild */
+   position : relative;
+    
+
+}
+
+
+
+h1 {
+    font-size: 65px;
+    font-weight: bold;
+}
+.main-header {
+    list-style: none; /* Entfernt die Listensymbole */
+    padding: 0; /* Entfernt den Standardabstand */
+    display: flex; /* Ausrichtung der Elemente nebeneinander */
+    justify-content: space-around; /* Gleichmäßiger Abstand zwischen den Elementen */
+}
+
+.main-header li {
+    margin: 0; /* Entfernt den Standardabstand der Listenelemente */
+}
+
+.main-header a {
+    display: inline-block; /* Ermöglicht die Anwendung von Padding und Margin */
+    padding: 10px 20px; /* Abstand innen */
+    background-color: #f71515; /* Hintergrundfarbe */
+    color: white; /* Textfarbe */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+    border-radius: 5px; /* Abgerundete Ecken */
+    transition: background-color 0.3s; /* Weiche Übergänge bei der Farbänderung */
+}
+
+.main-header a:hover {
+    background-color: #050a0f; /* Ändert die Hintergrundfarbe beim Überfahren mit der Maus */
+    color: rgb(245, 6, 6); /* Textfarbe */
+}
+
+/* Suchfunktion */
+#search-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
+#search-input {
+    padding: 10px;
+    font-size: 16px;
+}
+#search-button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+.highlight {
+    background-color: yellow; /* Hervorhebungsfarbe */
+}
+#search-results {
+    margin-top: 10px;
+    font-weight: bold; /* Fett anzeigen */
+    font-size: 20px; /* Größe anpassen */
+}
+.error {
+    color: red; /* Rote Farbe für Fehlermeldungen */
+}

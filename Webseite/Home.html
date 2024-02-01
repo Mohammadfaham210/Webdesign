@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Webseite</title>
+    <link rel="stylesheet" href="styles-Home.css">
+    
+</head>
+<body>
+    <nav>
+        <h1>DRK</h1>
+         <!-- Suchfunktion -->
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="Suche...">
+            <button id="search-button" onclick="search()">Suchen</button>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Willkommen bei der DRK</h1>
+        <p>Wir sind eine gemeinnützige Organisation, die sich für die Gesundheit und das Wohlergehen der Menschen einsetzt.</p>
+        <ul class="main-header">
+            <li><a href="unsere Mission.html">Unsere Mission</a></li>
+            <li><a href="Erfolgsgeschichte.html">Erfolgsgeschichten</a></li>
+            <li><a href="DRKMITACHEN.html">Mitmachen</a></li>
+            <li><a href="Spende.html">Spenden</a></li>
+        </ul>
+    </header>
+
+    <!-- Suchergebnisse und Fehlermeldungen -->
+    <div id="search-results">
+        <!-- Hier werden die Suchergebnisse oder Fehlermeldungen angezeigt -->
+    </div>
+
+    <script src="script-Home.js"></script>
+</body>
+</html>
