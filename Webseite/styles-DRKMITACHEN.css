@@ -84,3 +84,57 @@ nav a {
     color: white;
     text-decoration: none;
 }
+
+
+
+.image-container {
+    text-align: center; /* Zentriert den Inhalt */
+    margin: 20px 0; /* Fügt oben und unten einen Abstand hinzu */
+}
+
+.image-container img {
+    max-width: 100%; /* Stellt sicher, dass das Bild nicht breiter als der Container ist */
+    height: auto; /* Behält das Seitenverhältnis des Bildes bei */
+}
+
+.image-container p {
+    margin-top: 20px; /* Fügt Abstand zwischen dem Bild und dem Text hinzu */
+}
+
+
+.modal-body input[type="text"],
+.modal-body input[type="tel"],
+.modal-body input[type="email"],
+.modal-body select,
+.modal-body button {
+    width: calc(100% - 20px); /* 100% der Containerbreite, abzüglich des Paddings */
+    padding: 12px; /* Mehr Padding für größere Felder */
+    margin: 8px 0; /* Abstand zwischen den Feldern */
+    box-sizing: border-box; /* Stellt sicher, dass Padding und Border innerhalb der Breite enthalten sind */
+    font-size: 16px; /* Größere Schriftart für bessere Lesbarkeit */
+}
+
+.modal-button {
+    padding: 15px 20px; /* Mehr Padding für einen größeren Button */
+    font-size: 18px; /* Größere Schrift für den Button-Text */
+    border-radius: 5px; /* Optional: Anpassen für abgerundete Ecken */
+}
+
+
+
+.notification {
+    display: none; /* Standardmäßig nicht angezeigt */
+    position: fixed; /* Positionierung relativ zum Viewport */
+    bottom: 20px; /* Abstand vom unteren Rand */
+    left: 50%; /* Zentrierung */
+    transform: translateX(-50%); /* Feinjustierung der Zentrierung */
+    background-color: #af4c4c; /* Hintergrundfarbe */
+    color: white; /* Textfarbe */
+    padding: 20px; /* Vergrößerter Innenabstand */
+    border-radius: 4px; /* Abgerundete Ecken */
+    z-index: 1000; /* Stellt sicher, dass die Benachrichtigung über anderen Elementen liegt */
+    font-size: 18px; /* Größere Schriftgröße */
+    max-width: 80%; /* Maximale Breite */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Schatten für bessere Sichtbarkeit */
+    line-height: 1.5; /* Verbesserte Zeilenhöhe für bessere Lesbarkeit */
+}

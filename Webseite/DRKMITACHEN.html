@@ -19,9 +19,6 @@
         <button id="openModal">Engagement-Optionen anzeigen</button>
     </div>
 
-    <div class="container">
-        <p>Hier können Sie mehr über die vielfältigen Möglichkeiten des Engagements beim DRK erfahren, von ehrenamtlicher Arbeit bis hin zu Ausbildungsmöglichkeiten.</p>
-    </div>
 
     <!-- Modal-Fenster für Engagement-Optionen -->
     <div id="engagementModal" class="modal">
@@ -42,9 +39,39 @@
         </div>
     </div>
 
-    <div class="footer">
+    <div class="image-container">
+        <img src="Bilder/WhatsApp Image 2024-02-05 at 11.08.32 (9).jpeg" alt="Engagement beim Deutschen Roten Kreuz">
         <p>Vielen Dank für Ihr Interesse am Deutschen Roten Kreuz!</p>
     </div>
+    
+
+<!-- Modal-Fenster für das Ausfüllen der Daten -->
+<div id="dataEntryModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Bitte füllen Sie Ihre Daten aus</h2>
+        </div>
+        <form id="dataEntryForm" class="modal-body">
+            <input type="text" name="firstname" placeholder="Vorname" required>
+            <input type="text" name="lastname" placeholder="Nachname" required>
+            <select name="gender">
+                <option value="male">Männlich</option>
+                <option value="female">Weiblich</option>
+                <option value="other">Andere</option>
+            </select>
+            <input type="tel" name="phone" placeholder="Telefonnummer" required>
+            <input type="email" name="email" placeholder="E-Mail-Adresse" required>
+            <input type="checkbox" name="privacy" required> Datenschutzbestimmung akzeptieren
+            <button type="submit">Bestätigen</button>
+        </form>
+    </div>
+</div>
+
+
+
+<div id="notification" class="notification">Vielen Dank für Ihre Eingabe, Sie werden bald benachrichtigt.</div>
+
 
     <script src="DRKMITACHEN.js"></script>
 </body>

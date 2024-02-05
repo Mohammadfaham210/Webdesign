@@ -68,3 +68,168 @@ h1 {
 .error {
     color: red; /* Rote Farbe für Fehlermeldungen */
 }
+
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+
+
+
+
+  .slideshow-container {
+    width: 100%;
+    position: relative;
+    margin: auto;
+    overflow: hidden; /* Verhindert Überlauf von Bildern */
+  }
+  
+  .mySlides {
+    display: none;
+    width: 100%;
+    height: 500px; /* Höhe des Bildes festlegen */
+  }
+  
+  .mySlides img {
+    width: 100%;
+    height: 500px; /* Höhe des Bildes festlegen */
+    object-fit: cover; /* Stellt sicher, dass das Bild den Container vollständig bedeckt */
+  }
+  
+
+
+  #about-us-section {
+    background-color: #f9f9f9; /* Hintergrundfarbe für den Abschnitt */
+    border: 1px solid #ddd; /* Rahmen um den Abschnitt */
+    border-radius: 4px; /* Leicht abgerundete Ecken */
+    padding: 20px; /* Innenabstand */
+    margin: 20px 0; /* Abstand oben und unten */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtiler Schatten für Tiefe */
+    position: relative; /* Für die Positionierung des Logos */
+
+}
+
+#about-us-section h2 {
+    color: red; /* Rote Farbe für den Titel */
+    margin-bottom: 15px; /* Abstand unter dem Titel */
+}
+
+.about-us-content p {
+    margin-bottom: 10px; /* Abstand zwischen den Absätzen */
+    line-height: 1.6; /* Zeilenhöhe für bessere Lesbarkeit */
+    padding-right: 120px; /* Platz auf der rechten Seite für das Logo */
+
+}
+
+.about-us-logo {
+    position: absolute; /* Absolute Positionierung innerhalb des Abschnitts */
+    right: 20px; /* Rechtsbündig mit Abstand zum Rand */
+    top: 20px; /* Abstand vom oberen Rand */
+    width: 150px; /* Oder jede andere Größe, die Sie wünschen */
+}
+
+.about-us-image {
+    width: 80%; /* Oder die gewünschte Breite */
+    height: auto; /* Beibehaltung des Seitenverhältnisses */
+    display: block; /* Verhindert, dass es als Inline-Element dargestellt wird */
+    margin-top: 20px; /* Abstand zum Text oben */
+}
+
+
+
+#first-aid-course {
+    background-color: #ffffff; /* oder eine andere Hintergrundfarbe Ihrer Wahl */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 4px; /* Falls gewünscht, können Sie hier abgerundete Ecken hinzufügen */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional, für einen leichten Schatten */
+}
+
+#first-aid-course h2 {
+    color: #d12323; /* Die Farbe kann an Ihr Design angepasst werden */
+    margin-bottom: 15px;
+}
+
+#first-aid-course p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+
+
+/* Flexbox-Container für die Bilder */
+.slideshow-container-first-aid {
+  display: flex; /* Aktiviert Flexbox */
+  justify-content: center; /* Zentriert die Inhalte horizontal */
+  align-items: center; /* Zentriert die Inhalte vertikal */
+  gap: 10px; /* Fügt Abstand zwischen den Bildern hinzu */
+}
+
+.mySlidesFirstAid img {
+  width: calc(33.33% - 20px); /* Weist jedem Bild ein Drittel der Breite des Containers zu, abzüglich des Abstands */
+  height: auto; /* Passt die Höhe automatisch an, um das Seitenverhältnis zu bewahren */
+  object-fit: cover; /* Stellt sicher, dass das Bild den zugewiesenen Bereich bedeckt, ohne seine Proportionen zu verzerren */
+}
