@@ -159,6 +159,100 @@ button.prev, button.next {
 
         
 
+.carousel-controls button {
+    cursor: pointer;
+    top: auto; /* Entfernt die vorherige Top-Positionierung */
+    bottom: 10px; /* Positioniert die Buttons am unteren Rand des Carousels */
+    transform: translateX(-50%); /* Zentriert die Buttons horizontal; keine vertikale Verschiebung benötigt */
+    background-color: rgba(0,0,0,0.5); /* Leicht transparent für eine subtile Optik */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px; /* Angepasste Größe */
+    border-radius: 50%; /* Kreisförmig für ein modernes Aussehen */
+    transition: background-color 0.3s ease; /* Sanfter Übergang für Hover-Effekt */
+}
+
+
+.zoo-title {
+    color: #d52b1e; /* Ein kräftiges Rot, das Aufmerksamkeit erregt */
+    margin-bottom: 20px; /* Fügt etwas Abstand zum folgenden Text hinzu */
+}
+
+
+
+
+.video-carousel .carousel-images video {
+    width: 100%; /* Stellt sicher, dass das Video die volle Breite des Containers einnimmt */
+    max-height: 500px; /* Erhöht die maximale Höhe der Videos */
+    object-fit: cover; /* Stellt sicher, dass das Video den Container vollständig ausfüllt, ohne das Seitenverhältnis zu verzerren */
+}
+
+.video-container {
+    display: flex;
+    justify-content: center; /* Zentriert die Videos im Container */
+    align-items: center; /* Hilft dabei, die Videos vertikal zu zentrieren */
+    overflow: hidden; /* Verhindert, dass Teile des Videos außerhalb des Containers angezeigt werden */
+    height: 500px; /* Setzt eine feste Höhe für den Video-Container */
+}
+
+.carousel.video-carousel {
+    max-width: 800px; /* Erhöht die maximale Breite des gesamten Carousel-Containers */
+    margin: auto; /* Zentriert das Carousel horizontal */
+}
+
+
+.content-section, .carousel-section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.content-title {
+    color: #d52b1e; /* Rot für den Titel */
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+.weihnachtsaktion-title {
+    color: #d52b1e; /* Rot für den Titel */
+    margin-bottom: 20px; /* Abstand unter dem Titel */
+}
+
+.weihnachtsaktion {
+    background-color: #ffffff; /* Hintergrundfarbe des Abschnitts */
+    padding: 20px; /* Polsterung um den Text */
+    margin: 20px 0; /* Abstand oben und unten */
+    border-radius: 8px; /* Abgerundete Ecken */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Leichter Schatten für Tiefe */
+}
+
+
+.weihnachtsbilder {
+    display: flex;
+    justify-content: center; /* Zentriert die Bilder horizontal */
+    gap: 10px; /* Fügt einen Abstand zwischen den Bildern hinzu */
+    flex-wrap: wrap; /* Erlaubt das Umbrechen auf eine neue Zeile bei kleinem Bildschirm */
+    margin-top: 20px; /* Abstand zum Text oben */
+}
+
+.weihnachtsbilder img {
+    width: 24%; /* Stellt sicher, dass alle vier Bilder nebeneinander passen */
+    max-width: 150px; /* Maximale Breite der Bilder, um Übergröße zu vermeiden */
+    height: auto; /* Behält das Seitenverhältnis der Bilder bei */
+    border-radius: 4px; /* Optional: Für abgerundete Ecken */
+}
+
+
+
 
 
         /* Stil für Formularfelder */
@@ -171,6 +265,7 @@ button.prev, button.next {
                 border-radius: 4px; /* Eckenradius */
                 box-sizing: border-box; /* Box-Modell */
             }
+            
         </style>
     </head>
     <body>
@@ -255,15 +350,27 @@ button.prev, button.next {
 
 
 
-        <article>
-            <h2>Mit den Kindern in den Dortmunder Zoo</h2>
-            <p>Ein Besuch im Dortmunder Zoo ist immer ein besonderes Erlebnis. Unsere jüngsten Teilnehmer hatten die Gelegenheit, die faszinierende Welt der Tiere hautnah zu erleben. Hier sind einige Eindrücke von unserem Ausflug.</p>
-           
 
-        </article>
+
+
+
+
+
+
+
+
+        <section class="content-section">
+            <article>
+                <h2 class="content-title">Mit den Kindern in den Dortmunder Zoo</h2>
+                <p>Ein Besuch im Dortmunder Zoo ist immer ein besonderes Erlebnis. Unsere jüngsten Teilnehmer hatten die Gelegenheit, die faszinierende Welt der Tiere hautnah zu erleben. Hier sind einige Eindrücke von unserem Ausflug. Die Kinder waren besonders begeistert von den exotischen Tieren, wie den farbenprächtigen Papageien, den majestätischen Löwen und den spielerischen Affen. Wir haben auch an einer geführten Tour teilgenommen, die informative Einblicke in die Lebensweisen der Tiere und die Bedeutung des Artenschutzes bot.</p>
+                <p>Ein Highlight des Tages war die Fütterungszeit, bei der die Kinder sehen konnten, wie die Zoo-Mitarbeiter mit großer Sorgfalt und Liebe zum Detail auf die Bedürfnisse der Tiere eingingen. Es war eine großartige Gelegenheit für die Kinder, Fragen zu stellen und mehr über die Ernährung der Tiere zu erfahren. Die Begeisterung in ihren Augen, als sie die Tiere aus nächster Nähe betrachten konnten, war unbezahlbar.</p>
+                <p>Der Ausflug in den Dortmunder Zoo war nicht nur eine lehrreiche Erfahrung für die Kinder, sondern auch eine Chance, die Wunder der Natur zu schätzen und die Bedeutung des Umweltschutzes zu verstehen. Wir freuen uns schon auf unseren nächsten Besuch und die vielen neuen Abenteuer, die dort auf uns warten.</p>
+            </article>
+        </section>
         
-
-
+        <section class="carousel-section">
+            <div class="carousel">
+              
 
         <div class="carousel">
             <div class="carousel-images">
@@ -281,6 +388,37 @@ button.prev, button.next {
     </div>
         </div>
         
+            </div>
+        </section>
+        
+        <section class="carousel-section">
+            <div class="carousel video-carousel">
+                <div class="carousel video-carousel">
+                    <div class="carousel-images video-container">
+                        <!-- Video 1 -->
+                        <video controls>
+                            <source src="Bilder/WhatsApp Video 2024-01-24 at 17.33.32.mp4" type="video/mp4">
+                            Ihr Browser unterstützt das Video-Tag nicht.
+                        </video>
+                        <!-- Video 2 -->
+                        <video controls>
+                            <source src="Bilder/WhatsApp Video 2024-01-24 at 17.33.34.mp4" type="video/mp4">
+                            Ihr Browser unterstützt das Video-Tag nicht.
+                        </video>
+                        <!-- Video 3 -->
+                        <video controls>
+                            <source src="Bilder/WhatsApp Video 2024-01-24 at 17.33.31.mp4" type="video/mp4">
+                            Ihr Browser unterstützt das Video-Tag nicht.
+                        </video>
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="prev" onclick="changeSlideVideo(-1)">&#10094;</button>
+                        <button class="next" onclick="changeSlideVideo(1)">&#10095;</button>
+                    </div>
+                </div>
+                            </div>
+        </section>
+        
 
 
 
@@ -290,12 +428,67 @@ button.prev, button.next {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class="weihnachtsaktion">
+            <h2 class="weihnachtsaktion-title">Freude schenken: Unser Weihnachtsgeschenk-Programm</h2>
+            <p>Weihnachten steht vor der Tür – eine Zeit der Freude, des Beisammenseins und des Gebens. In dieser besinnlichen Jahreszeit möchten wir vom Deutschen Roten Kreuz Ihnen helfen, die Freude des Schenkens zu erleben und gleichzeitig jenen ein Lächeln zu schenken, die es am meisten benötigen. Unser spezielles Weihnachtsgeschenk-Einpack- und Verteilungsprogramm ist mehr als nur eine Geste der Nächstenliebe; es ist ein Herzstück unserer Mission, Wärme, Hoffnung und Freude zu verbreiten.</p>
+            <p>Unser engagiertes Team aus Freiwilligen setzt sich zusammen, um liebevoll ausgewählte Geschenke für Menschen in Not einzupacken. Jedes Geschenk, klein oder groß, wird mit größter Sorgfalt und Aufmerksamkeit verpackt, um sicherzustellen, dass es nicht nur ein physisches Präsent, sondern auch ein Symbol der Liebe und Fürsorge ist, die wir als Gemeinschaft teilen.</p>
+            <p>Aber unser Engagement endet nicht beim Einpacken der Geschenke. Wir organisieren auch die Verteilung dieser sorgfältig verpackten Zeichen der Hoffnung an bedürftige Familien, Kinder in Waisenhäusern, ältere Menschen in Pflegeheimen und andere, die vielleicht keine anderen Geschenke unter ihrem Weihnachtsbaum finden werden. Durch unsere koordinierten Bemühungen erreichen diese Geschenke diejenigen, die sie am meisten brauchen, rechtzeitig zum Fest.</p>
+            <p>Wir laden Sie herzlich ein, Teil dieser wunderbaren Initiative zu werden. Ob durch die Spende von Geschenken, die Unterstützung beim Einpacken oder die Hilfe bei der Verteilung – jede Handreichung zählt. Gemeinsam können wir einen Unterschied machen und sicherstellen, dass das Licht der Weihnachtsfreude auch in den dunkelsten Ecken leuchtet.</p>
+            <p>Dieses Weihnachten lassen Sie uns zusammenkommen und die wahren Werte des Festes hochhalten: Teilen, Fürsorge und Gemeinschaft. Werden Sie Teil unseres Weihnachtsgeschenk-Einpack- und Verteilungsprogramms und helfen Sie uns, Liebe und Freude zu verbreiten. Denn in jedem Geschenk, das wir geben, in jeder Hilfe, die wir anbieten, lebt der Geist der Weihnacht.</p>
+
+
+
+            <div class="weihnachtsbilder">
+                <img src="/Bilder/WhatsApp Image 2024-02-05 at 11.08.32 (10).jpeg" alt="Weihnachtsaktion Bild 1">
+                <img src="/Bilder/WhatsApp Image 2024-02-05 at 11.08.32 (11).jpeg" alt="Weihnachtsaktion Bild 2">
+                <img src="/Bilder/WhatsApp Image 2024-02-05 at 11.08.32 (12).jpeg" alt="Weihnachtsaktion Bild 3"> 
+                <img src="/Bilder/WhatsApp Image 2024-02-05 at 11.08.32 (13).jpeg" alt="Weihnachtsaktion Bild 4">
+            </div>
+            
+        </section>
+        
 
 
 
         <div class="footer">
             <p>© 2024 Deutsches Rotes Kreuz</p>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <script>
             function openPopup() {
@@ -324,6 +517,34 @@ function changeSlide(step) {
     slides.forEach(slide => slide.style.display = 'none');
     slides[slideIndex].style.display = 'block';
 }
+
+
+let videoSlideIndex = 0; // Initialisierung des Video-Slide-Index
+
+// Funktion zum Anzeigen des aktuellen Videos und Ausblenden der anderen
+function showVideoSlide(index) {
+    const videos = document.querySelectorAll('.video-container video');
+    if (index >= videos.length) videoSlideIndex = 0; // Zurück zum ersten Video, wenn das Ende erreicht ist
+    if (index < 0) videoSlideIndex = videos.length - 1; // Zum letzten Video, wenn zurück am Anfang
+
+    // Alle Videos ausblenden
+    videos.forEach(video => {
+        video.style.display = 'none';
+    });
+
+    // Nur das aktuelle Video anzeigen
+    videos[videoSlideIndex].style.display = 'block';
+}
+
+// Funktion zum Ändern des Video-Slides
+function changeSlideVideo(step) {
+    showVideoSlide(videoSlideIndex += step);
+}
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    showVideoSlide(videoSlideIndex); // Zeigt das erste Video beim Laden der Seite
+});
+
 
 
 
