@@ -233,3 +233,11 @@ h1 {
   height: auto; /* Passt die Höhe automatisch an, um das Seitenverhältnis zu bewahren */
   object-fit: cover; /* Stellt sicher, dass das Bild den zugewiesenen Bereich bedeckt, ohne seine Proportionen zu verzerren */
 }
+
+
+.header, .footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #d52b1e;
+  color: white;
+}

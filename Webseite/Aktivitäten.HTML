@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Unsere Aktivitäten mit den Kindern - Deutsches Rotes Kreuz</title>
         <style>
-            /* Grundlegende Styles, ähnlich zu Ihrer Vorlage */
             body {
                 font-family: 'Arial', sans-serif;
                 margin: 0;
@@ -29,7 +28,6 @@
                 color: white;
             }
 
-            /* Navigationsstil, konsistent mit Ihrer Vorlage */
             nav {
                 background-color: #d52b1e;
                 color: white;
@@ -43,50 +41,46 @@
                 text-decoration: none;
             }
 
-            /* Stil für das Kommentarfeld */
             textarea {
-                height: 150px; /* Höhe des Kommentarfelds */
-                resize: vertical; /* Ermöglicht vertikale Größenänderung */
+                height: 150px; 
+                resize: vertical; 
             }
 
-            /* Stil für Checkboxen und Labels */
             .checkbox-container {
                 margin: 10px 0;
                 display: flex;
                 align-items: center;
             }
 
-            /* Stil für Buttons */
             button {
-                background-color: #d52b1e; /* Farbe */
-                color: white; /* Textfarbe */
-                padding: 14px 20px; /* Polsterung */
-                margin: 8px 0; /* Abstand */
-                border: none; /* Kein Rand */
-                cursor: pointer; /* Mauszeiger-Stil */
-                width: 100%; /* Volle Breite */
+                background-color: #d52b1e; 
+                color: white; 
+                padding: 14px 20px; 
+                margin: 8px 0;
+                border: none; 
+                cursor: pointer; 
+                width: 100%;
             }
 
 
             button:hover {
-                background-color: #b0241a; /* Dunkleres Rot für Hover-Effekt */
+                background-color: #b0241a; 
             }
 
-            /* Stil für das Popup-Fenster */
             .popup {
                 display: none;
                 position: fixed;
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%);
-                width: 50%; /* Breite des Popups */
-                max-width: 600px; /* Maximale Breite */
+                width: 50%; 
+                max-width: 600px; 
                 background-color: white;
                 padding: 20px;
                 border-radius: 5px;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 z-index: 9;
-                max-width: 600px; /* Maximale Breite */
+                max-width: 600px; 
             }
 
             
@@ -98,48 +92,47 @@
         }
         
         .image-gallery img {
-            flex-basis: calc(33% - 20px); /* Drei Bilder pro Reihe mit Abstand */
+            flex-basis: calc(33% - 20px); 
             margin: 10px;
-            max-width: 100%; /* Responsivität */
-            height: auto; /* Behält das Seitenverhältnis bei */
-            border-radius: 4px; /* Optional: Für abgerundete Ecken */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: Fügt einen leichten Schatten hinzu */
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
         }
 
 
 
 
         .carousel-images img {
-    width: 100%; /* Stellt sicher, dass die Breite der Bilder 100% des Carousel-Containers entspricht */
-    height: auto; /* Passt die Höhe automatisch an, um das Seitenverhältnis zu bewahren */
-    object-fit: cover; /* Stellt sicher, dass die Bilder den zugewiesenen Bereich bedecken, ohne ihre Proportionen zu verzerren */
-    display: block; /* Verhindert, dass es zu unerwünschtem Platz um das Bild kommt */
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+    display: block;
 }
 
 .carousel {
-    max-width: 600px; /* Maximale Breite des Carousel-Containers */
-    margin: auto; /* Zentriert das Carousel horizontal */
-    overflow: hidden; /* Verhindert, dass Inhalte außerhalb des Containers sichtbar sind */
+    max-width: 600px; 
+    margin: auto; 
+    overflow: hidden;
 }
 
 .carousel-images {
-    display: flex; /* Aktiviert Flexbox für die Bildcontainer */
-    flex-wrap: nowrap; /* Verhindert, dass die Bilder umgebrochen werden */
-    width: 100%; /* Stellt die Breite des Bildcontainers ein */
-    height: 400px; /* Festgelegte Höhe für den Carousel-Container */
+    display: flex; 
+    flex-wrap: nowrap; 
+    width: 100%;
+    height: 400px; 
 }
 
 .carousel-images img:first-child {
     display: block;
 }
 
-/* Positionierung der Buttons aktualisiert */
 button.prev, button.next {
     cursor: pointer;
-    position: relative; /* Geändert von 'absolute' zu 'relative' */
-    top: 0; /* Anpassung für relative Positionierung */
-    transform: translateY(0); /* Entfernen der Verschiebung */
-    margin: 10px; /* Abstand zum Bild hinzugefügt */
+    position: relative; 
+    top: 0; 
+    transform: translateY(0); 
+    margin: 10px;
     background-color: rgba(0,0,0,0.5);
     color: white;
     border: none;
@@ -147,13 +140,12 @@ button.prev, button.next {
     z-index: 100;
 }
 
-/* Container für die Buttons hinzugefügt */
 .carousel-controls {
-    text-align: center; /* Zentriert die Buttons */
+    text-align: center; 
 }
 
 .carousel .prev, .carousel .next {
-    display: inline-block; /* Stellt Buttons nebeneinander dar */
+    display: inline-block; 
 }
 
 
@@ -161,44 +153,44 @@ button.prev, button.next {
 
 .carousel-controls button {
     cursor: pointer;
-    top: auto; /* Entfernt die vorherige Top-Positionierung */
-    bottom: 10px; /* Positioniert die Buttons am unteren Rand des Carousels */
-    transform: translateX(-50%); /* Zentriert die Buttons horizontal; keine vertikale Verschiebung benötigt */
-    background-color: rgba(0,0,0,0.5); /* Leicht transparent für eine subtile Optik */
+    top: auto;
+    bottom: 10px; 
+    transform: translateX(-50%);
+    background-color: rgba(0,0,0,0.5); 
     color: white;
     border: none;
     padding: 10px 15px;
-    font-size: 18px; /* Angepasste Größe */
-    border-radius: 50%; /* Kreisförmig für ein modernes Aussehen */
-    transition: background-color 0.3s ease; /* Sanfter Übergang für Hover-Effekt */
+    font-size: 18px; 
+    border-radius: 50%; 
+    transition: background-color 0.3s ease; 
 }
 
 
 .zoo-title {
-    color: #d52b1e; /* Ein kräftiges Rot, das Aufmerksamkeit erregt */
-    margin-bottom: 20px; /* Fügt etwas Abstand zum folgenden Text hinzu */
+    color: #d52b1e; 
+    margin-bottom: 20px; 
 }
 
 
 
 
 .video-carousel .carousel-images video {
-    width: 100%; /* Stellt sicher, dass das Video die volle Breite des Containers einnimmt */
-    max-height: 500px; /* Erhöht die maximale Höhe der Videos */
-    object-fit: cover; /* Stellt sicher, dass das Video den Container vollständig ausfüllt, ohne das Seitenverhältnis zu verzerren */
+    width: 100%; 
+    max-height: 500px; 
+    object-fit: cover; 
 }
 
 .video-container {
     display: flex;
-    justify-content: center; /* Zentriert die Videos im Container */
-    align-items: center; /* Hilft dabei, die Videos vertikal zu zentrieren */
-    overflow: hidden; /* Verhindert, dass Teile des Videos außerhalb des Containers angezeigt werden */
-    height: 500px; /* Setzt eine feste Höhe für den Video-Container */
+    justify-content: center;
+    align-items: center; 
+    overflow: hidden; 
+    height: 500px; 
 }
 
 .carousel.video-carousel {
-    max-width: 800px; /* Erhöht die maximale Breite des gesamten Carousel-Containers */
-    margin: auto; /* Zentriert das Carousel horizontal */
+    max-width: 800px; 
+    margin: auto; 
 }
 
 
@@ -211,65 +203,118 @@ button.prev, button.next {
 }
 
 .content-title {
-    color: #d52b1e; /* Rot für den Titel */
+    color: #d52b1e; 
     margin-bottom: 20px;
 }
 
 
 
-
-
-
-
-
 .weihnachtsaktion-title {
-    color: #d52b1e; /* Rot für den Titel */
-    margin-bottom: 20px; /* Abstand unter dem Titel */
+    color: #d52b1e; 
+    margin-bottom: 20px; 
 }
 
 .weihnachtsaktion {
-    background-color: #ffffff; /* Hintergrundfarbe des Abschnitts */
-    padding: 20px; /* Polsterung um den Text */
-    margin: 20px 0; /* Abstand oben und unten */
-    border-radius: 8px; /* Abgerundete Ecken */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Leichter Schatten für Tiefe */
+    background-color: #ffffff; 
+    padding: 20px; 
+    margin: 20px 0; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
 }
 
 
 .weihnachtsbilder {
     display: flex;
-    justify-content: center; /* Zentriert die Bilder horizontal */
-    gap: 10px; /* Fügt einen Abstand zwischen den Bildern hinzu */
-    flex-wrap: wrap; /* Erlaubt das Umbrechen auf eine neue Zeile bei kleinem Bildschirm */
-    margin-top: 20px; /* Abstand zum Text oben */
+    justify-content: center; 
+    gap: 10px; 
+    flex-wrap: wrap; 
+    margin-top: 20px; 
 }
 
 .weihnachtsbilder img {
-    width: 24%; /* Stellt sicher, dass alle vier Bilder nebeneinander passen */
-    max-width: 150px; /* Maximale Breite der Bilder, um Übergröße zu vermeiden */
-    height: auto; /* Behält das Seitenverhältnis der Bilder bei */
-    border-radius: 4px; /* Optional: Für abgerundete Ecken */
+    width: 24%;
+    max-width: 150px; 
+    height: auto; 
+    border-radius: 4px; 
 }
 
 
 
 
+.osteraktion-title {
+    color: #d52b1e; 
+    margin-bottom: 20px; 
+}
 
-        /* Stil für Formularfelder */
+.osteraktion {
+    background-color: #ffffff; 
+    padding: 20px; 
+    margin: 20px 0; 
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.osterbilder {
+    display: flex;
+    justify-content: center;
+    gap: 10px; 
+    margin-top: 20px; 
+}
+
+.osterbilder img {
+    width: 100%; 
+    max-width: 600px;
+    height: auto; 
+    border-radius: 4px; 
+}
+
+
+.einsatzwagen-section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.einsatzwagen-title {
+    color: #d52b1e; 
+    margin-bottom: 20px;
+}
+
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    gap: 20px;
+}
+
+.video-gallery video {
+    width: calc(50% - 10px); 
+    max-height: 300px;
+}
+
+.video-gallery video:last-child {
+    width: 100%; 
+    max-height: 500px; 
+}
+
+
+
+
         input[type=text], input[type=date], input[type=tel], input[type=email], select, textarea {
-                width: 95%; /* Breite der Felder */
-                padding: 12px 20px; /* Polsterung */
-                margin: 8px 0; /* Abstand zwischen Feldern */
-                display: inline-block; /* Anzeigeart */
-                border: 1px solid #ccc; /* Rand */
-                border-radius: 4px; /* Eckenradius */
-                box-sizing: border-box; /* Box-Modell */
+                width: 95%; 
+                padding: 12px 20px; 
+                margin: 8px 0; 
+                display: inline-block; 
+                border: 1px solid #ccc; 
+                border-radius: 4px; 
+                box-sizing: border-box; 
             }
             
         </style>
     </head>
     <body>
-        <!-- Navigationsbereich -->
         <nav>
             <h1>DRK</h1>
             <a href="Hauptseite.html">Zurück zur Hauptseite</a>
@@ -280,7 +325,6 @@ button.prev, button.next {
         </div>
 
         <div class="container">
-            <!-- Inhalt der Seite: Beschreibung der Aktivitäten -->
             <article>
                 <p>Bei DRK glauben wir fest daran, dass das Heranwachsen mehr bedeutet als nur Lernen und Spielen. Es geht darum, Erfahrungen zu sammeln, die für das ganze Leben prägen. Unsere sorgfältig konzipierten Aktivitäten für Kinder und Jugendliche aller Altersstufen und Hintergründe bieten genau das – eine Chance, zu lernen, zu lachen und lebenslange Freundschaften zu knüpfen.</p>
 
@@ -297,10 +341,8 @@ button.prev, button.next {
 
 
 
-    <!-- Anmeldebutton -->
     <button onclick="openPopup()">Für Aktivitäten anmelden</button>
 
-    <!-- Popup-Fenster für Anmeldeformular -->
     <div id="anmeldePopup" class="popup">
         <h2>Anmeldeformular</h2>
         <form>
@@ -325,7 +367,6 @@ button.prev, button.next {
                 <option value="sport">Sport</option>
                 <option value="kunst">Kunst</option>
                 <option value="musik">Musik</option>
-                <!-- Weitere Optionen nach Bedarf -->
             </select>
             
             <textarea id="kommentar" name="kommentar" placeholder="Zusätzliche Informationen (optional)"></textarea>
@@ -395,17 +436,14 @@ button.prev, button.next {
             <div class="carousel video-carousel">
                 <div class="carousel video-carousel">
                     <div class="carousel-images video-container">
-                        <!-- Video 1 -->
                         <video controls>
                             <source src="Bilder/WhatsApp Video 2024-01-24 at 17.33.32.mp4" type="video/mp4">
                             Ihr Browser unterstützt das Video-Tag nicht.
                         </video>
-                        <!-- Video 2 -->
                         <video controls>
                             <source src="Bilder/WhatsApp Video 2024-01-24 at 17.33.34.mp4" type="video/mp4">
                             Ihr Browser unterstützt das Video-Tag nicht.
                         </video>
-                        <!-- Video 3 -->
                         <video controls>
                             <source src="Bilder/WhatsApp Video 2024-01-24 at 17.33.31.mp4" type="video/mp4">
                             Ihr Browser unterstützt das Video-Tag nicht.
@@ -452,12 +490,55 @@ button.prev, button.next {
 
 
             <div class="weihnachtsbilder">
-                <img src="/Bilder/WhatsApp Image 2024-02-05 at 11.08.32 (10).jpeg" alt="Weihnachtsaktion Bild 1">
-                <img src="/Bilder/WhatsApp Image 2024-02-05 at 11.08.32 (11).jpeg" alt="Weihnachtsaktion Bild 2">
-                <img src="/Bilder/WhatsApp Image 2024-02-05 at 11.08.32 (12).jpeg" alt="Weihnachtsaktion Bild 3"> 
-                <img src="/Bilder/WhatsApp Image 2024-02-05 at 11.08.32 (13).jpeg" alt="Weihnachtsaktion Bild 4">
+                <img src="Bilder/WhatsApp Image 2024-02-05 at 11.08.32 (10).jpeg" alt="Weihnachtsaktion Bild 1">
+                <img src="Bilder/WhatsApp Image 2024-02-07 at 16.01.45.jpeg" alt="Weihnachtsaktion Bild 2">
+                <img src="Bilder/WhatsApp Image 2024-02-05 at 11.08.32 (11).jpeg" alt="Weihnachtsaktion Bild 3"> 
+                <img src="Bilder/WhatsApp Image 2024-02-05 at 11.08.32 (12).jpeg" alt="Weihnachtsaktion Bild 4">
+                <img src="Bilder/WhatsApp Image 2024-02-05 at 11.08.32 (13).jpeg" alt="Weihnachtsaktion Bild 5">
             </div>
             
+        </section>
+        
+
+
+
+
+
+
+
+
+
+
+        <section class="osteraktion">
+            <h2 class="osteraktion-title">Osteraktion: Ein Rückblick auf unsere Feierlichkeiten</h2>
+            <p>Letztes Jahr haben wir mit großer Freude unsere Osteraktion durchgeführt, bei der wir gemeinsam mit den Kindern und ihren Familien die Osterzeit gefeiert haben. Die Veranstaltung war gefüllt mit zahlreichen Aktivitäten, darunter Ostereiersuche, kreative Bastelstunden und Geschichtenerzählen, die allen Beteiligten viel Freude bereitet haben.</p>
+            <p>Es war ein Tag voller Lachen, Gemeinschaft und festlicher Stimmung, der uns allen noch lange in Erinnerung bleiben wird. Wir sind stolz darauf, solche Momente der Freude und des Zusammenhalts schaffen zu können, und freuen uns schon darauf, auch dieses Jahr wieder eine unvergessliche Osteraktion zu organisieren.</p>
+        
+            <div class="osterbilder">
+                <img src="Bilder/WhatsApp Image 2024-02-07 at 16.01.44 (1).jpeg" alt="Osteraktion Bild">
+            </div>
+        </section>
+        
+
+
+        <section class="einsatzwagen-section">
+            <h2 class="einsatzwagen-title">Einblick in unsere Einsätze: Die DRK-Einsatzwagen in Aktion</h2>
+            <p>Um einen authentischen Einblick in die tägliche Arbeit und die Herausforderungen unserer Einsatzteams zu bieten, haben wir einige Momente unserer Einsätze auf Video festgehalten. Diese Videos zeigen, wie unsere Einsatzwagen vor Ort agieren, Hilfe leisten und in Notfallsituationen unterstützen. Es ist uns ein Anliegen, die Bedeutung und den Wert unserer Arbeit transparent zu machen und zu veranschaulichen, wie wir in der Gemeinschaft einen Unterschied machen.</p>
+            
+            <div class="video-gallery">
+                <video controls>
+                    <source src="Bilder/1.mp4" type="video/mp4">
+                    Ihr Browser unterstützt das Video-Tag nicht.
+                </video>
+                <video controls>
+                    <source src="Bilder/2.mp4" type="video/mp4">
+                    Ihr Browser unterstützt das Video-Tag nicht.
+                </video>
+                <video controls>
+                    <source src="Bilder/3.mp4" type="video/mp4">
+                    Ihr Browser unterstützt das Video-Tag nicht.
+                </video>
+            </div>
         </section>
         
 
@@ -519,30 +600,26 @@ function changeSlide(step) {
 }
 
 
-let videoSlideIndex = 0; // Initialisierung des Video-Slide-Index
+let videoSlideIndex = 0; 
 
-// Funktion zum Anzeigen des aktuellen Videos und Ausblenden der anderen
 function showVideoSlide(index) {
     const videos = document.querySelectorAll('.video-container video');
-    if (index >= videos.length) videoSlideIndex = 0; // Zurück zum ersten Video, wenn das Ende erreicht ist
-    if (index < 0) videoSlideIndex = videos.length - 1; // Zum letzten Video, wenn zurück am Anfang
+    if (index >= videos.length) videoSlideIndex = 0; 
+    if (index < 0) videoSlideIndex = videos.length - 1; 
 
-    // Alle Videos ausblenden
     videos.forEach(video => {
         video.style.display = 'none';
     });
 
-    // Nur das aktuelle Video anzeigen
     videos[videoSlideIndex].style.display = 'block';
 }
 
-// Funktion zum Ändern des Video-Slides
 function changeSlideVideo(step) {
     showVideoSlide(videoSlideIndex += step);
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    showVideoSlide(videoSlideIndex); // Zeigt das erste Video beim Laden der Seite
+    showVideoSlide(videoSlideIndex); 
 });
 
 

@@ -23,7 +23,6 @@ body {
     color: white;
 }
 
-/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
@@ -54,7 +53,6 @@ body {
     cursor: pointer;
 }
 
-/* Button Styles */
 .modal-button {
     display: block;
     width: 100%;
@@ -71,7 +69,6 @@ body {
     background-color: #b0241e;
 }
 
-/* Navigationsstil */
 nav {
     background-color: #d52b1e;
     color: white;
@@ -88,17 +85,17 @@ nav a {
 
 
 .image-container {
-    text-align: center; /* Zentriert den Inhalt */
-    margin: 20px 0; /* Fügt oben und unten einen Abstand hinzu */
+    text-align: center; 
+    margin: 20px 0; 
 }
 
 .image-container img {
-    max-width: 100%; /* Stellt sicher, dass das Bild nicht breiter als der Container ist */
-    height: auto; /* Behält das Seitenverhältnis des Bildes bei */
+    max-width: 100%; 
+    height: auto; 
 }
 
 .image-container p {
-    margin-top: 20px; /* Fügt Abstand zwischen dem Bild und dem Text hinzu */
+    margin-top: 20px; 
 }
 
 
@@ -107,34 +104,44 @@ nav a {
 .modal-body input[type="email"],
 .modal-body select,
 .modal-body button {
-    width: calc(100% - 20px); /* 100% der Containerbreite, abzüglich des Paddings */
-    padding: 12px; /* Mehr Padding für größere Felder */
-    margin: 8px 0; /* Abstand zwischen den Feldern */
-    box-sizing: border-box; /* Stellt sicher, dass Padding und Border innerhalb der Breite enthalten sind */
-    font-size: 16px; /* Größere Schriftart für bessere Lesbarkeit */
+    width: calc(100% - 20px); 
+    padding: 12px; 
+    margin: 8px 0; 
+    box-sizing: border-box; 
+    font-size: 16px; 
 }
 
 .modal-button {
-    padding: 15px 20px; /* Mehr Padding für einen größeren Button */
-    font-size: 18px; /* Größere Schrift für den Button-Text */
-    border-radius: 5px; /* Optional: Anpassen für abgerundete Ecken */
+    padding: 15px 20px; 
+    font-size: 18px; 
+    border-radius: 5px; 
 }
 
 
 
 .notification {
-    display: none; /* Standardmäßig nicht angezeigt */
-    position: fixed; /* Positionierung relativ zum Viewport */
-    bottom: 20px; /* Abstand vom unteren Rand */
-    left: 50%; /* Zentrierung */
-    transform: translateX(-50%); /* Feinjustierung der Zentrierung */
-    background-color: #af4c4c; /* Hintergrundfarbe */
-    color: white; /* Textfarbe */
-    padding: 20px; /* Vergrößerter Innenabstand */
-    border-radius: 4px; /* Abgerundete Ecken */
-    z-index: 1000; /* Stellt sicher, dass die Benachrichtigung über anderen Elementen liegt */
-    font-size: 18px; /* Größere Schriftgröße */
-    max-width: 80%; /* Maximale Breite */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Schatten für bessere Sichtbarkeit */
-    line-height: 1.5; /* Verbesserte Zeilenhöhe für bessere Lesbarkeit */
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    background-color: #af4c4c;
+    color: white; 
+    padding: 20px; 
+    border-radius: 4px; 
+    z-index: 1000; 
+    font-size: 18px; 
+    max-width: 80%; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    line-height: 1.5; 
 }
+
+
+    
+
+        .header, .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #d52b1e;
+            color: white;
+        }
