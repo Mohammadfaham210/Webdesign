@@ -1,37 +1,24 @@
 function search() {
-    var searchTerm = document.getElementById("search-input").value.trim(); // Leerzeichen entfernen
-    var content = document.body.innerHTML;
-    
-    // Überprüfen, ob das Suchfeld leer ist
-    if (searchTerm === "") {
-        document.getElementById("search-results").innerHTML = '<span class="error">Bitte geben Sie einen Suchbegriff ein.</span>';
-        return; // Beenden Sie die Funktion, wenn kein Suchbegriff eingegeben wurde
-    }
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('search-input'); // Korrigieren Sie die ID hier
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
 
-    var searchRegex = new RegExp(searchTerm, "gi");
-    
-    // Entfernen Sie zuerst die gelbe Hervorhebung vom vorherigen Suchergebnis
-    var unhighlightedContent = content.replace(/<span class="highlight">(.*?)<\/span>/gi, "$1");
-
-    // Ersetzen Sie den HTML-Inhalt mit den neuen hervorgehobenen Ergebnissen
-    document.body.innerHTML = unhighlightedContent;
-
-    var highlightedContent = content.replace(searchRegex, '<span class="highlight">$&</span>');
-
-    // Ersetzen Sie den HTML-Inhalt mit den neuen hervorgehobenen Ergebnissen
-    document.body.innerHTML = highlightedContent;
-
-    var matches = content.match(searchRegex);
-
-    if (matches) {
-        document.getElementById("search-results").innerHTML = "Suchergebnisse gefunden: " + matches.length;
-    } else {
-        document.getElementById("search-results").innerHTML = '<span class="error">Suchergebnis nicht gefunden.</span>';
-    }
+  for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("a")[0];
+      if (a) {
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+          } else {
+              li[i].style.display = "none";
+          }
+      }
+  }
 }
 
 var slideIndex = 0;
-showSlides();
 
 function showSlides() {
   var i;
@@ -45,5 +32,5 @@ function showSlides() {
   setTimeout(showSlides, 3000); // Change image every 4 seconds
 }
 
-
+showSlides();
 

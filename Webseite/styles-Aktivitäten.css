@@ -1,0 +1,395 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    
+}
+.container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 110px 20px 110px; 
+    margin: auto;
+    font-size: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0 10px 0; 
+    color: #f1efef;
+    font-size: 40px;
+
+}
+.header, .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #d52b1e;
+    color: white;
+}
+
+nav {
+    background-color: #d52b1e;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+textarea {
+    height: 150px; 
+    resize: vertical; 
+}
+
+.checkbox-container {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+
+.btn{
+    background-color: #d52b1e; 
+    color: white; 
+    padding: 14px 20px 14px 20px; 
+    font-size: 20px;
+    border: 6px solid #1f1616;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+    display: block;
+    width: 30%;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+  
+}
+
+.btn:hover {
+    background-color: #1f1616; 
+    color: white; 
+}
+.popup {
+    border: #d52b1e 6px solid;
+display: none; 
+position: fixed;
+left: 50%;
+top: 50%;
+font-size: 20px;
+transform: translate(-50%, -50%);
+width: 40%; 
+background-color: white;
+padding: 10px; 
+border-radius: 9px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+z-index: 10;
+transition: transform 0.2s ease, opacity 0.2s ease; 
+
+}
+
+
+.image-gallery {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+padding: 10px 0;
+}
+
+.image-gallery img {
+flex-basis: calc(33% - 20px); 
+margin: 10px;
+max-width: 100%;
+height: auto;
+border-radius: 4px; 
+box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+}
+
+
+#btnb{
+    background-color: #d52b1e; 
+    color: white; 
+    padding: 14px 20px 14px 20px; 
+    font-size: 20px;
+    border: 6px solid #1f1616;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+    display: block;
+    width: 30%;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+
+
+}
+
+#btnb:hover {
+    background-color: #1f1616; 
+    color: rgb(244, 8, 8); 
+}
+
+.carousel-images img {
+width: 100%;
+height: auto;
+object-fit: cover; 
+display: block;
+}
+
+.carousel {
+max-width: 600px; 
+margin: auto; 
+overflow: hidden;
+}
+
+.carousel-images {
+display: flex; 
+flex-wrap: nowrap; 
+width: 100%;
+height: 400px; 
+
+}
+
+.carousel-images img:first-child {
+display: block;
+}
+
+button.prev, button.next {
+cursor: pointer;
+position: relative; 
+top: 0; 
+transform: translateY(0); 
+margin: 10px;
+background-color: rgba(0,0,0,0.5);
+color: white;
+border: none;
+padding: 10px 15px;
+z-index: 100;
+}
+
+.carousel-controls {
+text-align: center; 
+}
+
+.carousel .prev, .carousel .next {
+display: inline-block; 
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+.carousel-controls button {
+cursor: pointer;
+top: auto;
+bottom: 10px; 
+transform: translateX(-50%);
+background-color: rgba(0,0,0,0.5); 
+color: white;
+border: none;
+padding: 10px 15px;
+font-size: 18px; 
+border-radius: 50%; 
+transition: background-color 0.3s ease; 
+}
+
+
+.zoo-title {
+color: #d52b1e; 
+margin-bottom: 20px; 
+}
+
+
+
+
+.video-carousel .carousel-images video {
+width: 100%; 
+max-height: 500px; 
+object-fit: cover; 
+}
+
+.video-container {
+display: flex;
+justify-content: center;
+align-items: center; 
+overflow: hidden; 
+height: 500px; 
+}
+
+.carousel.video-carousel {
+max-width: 800px; 
+margin: auto; 
+}
+
+
+.content-section, .carousel-section {
+margin: 20px 0;
+padding: 20px;
+background-color: #ffffff;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+font-size: 20px; 
+}
+
+.content-section h2, .carousel-section h2 {
+font-size: 50px; 
+}
+.content-title {
+color: #d52b1e; 
+margin-bottom: 20px;
+}
+
+
+
+.weihnachtsaktion-title {
+color: #d52b1e; 
+margin-bottom: 20px; 
+}
+
+.weihnachtsaktion {
+background-color: #ffffff; 
+padding: 20px; 
+margin: 20px 0; 
+border-radius: 8px; 
+box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+font-size: 20px;
+}
+
+
+.weihnachtsbilder {
+display: flex;
+justify-content: center; 
+gap: 100px; 
+flex-wrap: wrap; 
+margin-top: 20px; 
+
+
+}
+
+.weihnachtsbilder img {
+width: 24%;
+max-width: 150px; 
+height: auto; 
+border-radius: 4px; 
+}
+
+
+
+
+.osteraktion-title {
+color: #d52b1e; 
+margin-bottom: 20px; 
+font-size: 30px;
+}
+
+.osteraktion {
+background-color: #ffffff; 
+padding: 20px; 
+margin: 20px 0; 
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+font-size: 20px;
+}
+
+.osterbilder {
+display: flex;
+justify-content: center;
+gap: 10px; 
+margin-top: 20px; 
+}
+
+.osterbilder img {
+width: 100%; 
+max-width: 600px;
+height: auto; 
+border-radius: 4px; 
+
+
+}
+
+
+.einsatzwagen-section {
+margin: 20px 0;
+padding: 20px;
+background-color: #fff;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+font-size: 20px; 
+}
+
+.einsatzwagen-title {
+color: #d52b1e; 
+margin-bottom: 20px;
+font-size: 30px; 
+}
+
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    gap: 20px;
+    background-color: rgb(109, 92, 92);    
+
+
+
+}
+
+
+
+
+
+
+
+/* Modal-Stil */
+.modal {
+display: none; /* Versteckt das Fenster standardmäßig */
+position: fixed; /* Bleibt an der Stelle, auch beim Scrollen */
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto; /* Bei Bedarf ein Scrollbar */
+background-color: rgb(0,0,0); /* Hintergrundfarbe */
+background-color: rgba(0,0,0,0.4); /* Schwarz mit Opazität */
+z-index: 1; /* Stellt sicher, dass es über anderen Inhalten liegt */
+}
+
+/* Modal-Inhalt */
+.modal-content {
+background-color: #e90505;
+margin: 15% auto; /* 15% vom oberen und automatischer Seitenrand */
+padding: 20px;
+border: 1px solid #fff;
+width: 80%; /* Kann angepasst werden */
+z-index: 2;
+color: #fff;
+}
+
+
+
+
+
+input[type=text], input[type=date], input[type=tel], input[type=email], select, textarea {
+    width: 95%; 
+    padding: 12px 20px; 
+    margin: 8px 0; 
+    display: inline-block; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+}

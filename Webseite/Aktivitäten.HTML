@@ -4,357 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Unsere Aktivitäten mit den Kindern - Deutsches Rotes Kreuz</title>
-        <style>
-            body {
-                font-family: 'Arial', sans-serif;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                color: #333;
-                background-color: #f4f4f4;
-            }
-            .container {
-                background: white;
-                border-radius: 8px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                padding: 20px;
-                max-width: 800px;
-                margin: auto;
-            }
-            .header, .footer {
-                text-align: center;
-                padding: 20px;
-                background-color: #d52b1e;
-                color: white;
-            }
-
-            nav {
-                background-color: #d52b1e;
-                color: white;
-                padding: 10px 20px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-            nav a {
-                color: white;
-                text-decoration: none;
-            }
-
-            textarea {
-                height: 150px; 
-                resize: vertical; 
-            }
-
-            .checkbox-container {
-                margin: 10px 0;
-                display: flex;
-                align-items: center;
-            }
-
-            button {
-                background-color: #d52b1e; 
-                color: white; 
-                padding: 14px 20px; 
-                margin: 8px 0;
-                border: none; 
-                cursor: pointer; 
-                width: 100%;
-            }
-
-
-            button:hover {
-                background-color: #b0241a; 
-            }
-
-            .popup {
-    display: none; /* Popup bleibt zunächst unsichtbar */
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 30%; /* Noch kleinere Breite */
-    max-width: 300px; /* Maximale Breite weiter reduziert */
-    background-color: white;
-    padding: 10px; /* Geringerer Innenabstand */
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 10;
-    transition: transform 0.2s ease, opacity 0.2s ease; /* Schnellere und sanftere Übergänge */
-}
-
-.popup-active {
-    display: block;
-    opacity: 1; /* Sorgt dafür, dass das Popup sichtbar ist */
-    transform: translate(-50%, -50%) scale(1.05); /* Fügt eine leichte Skalierung für den Aktivierungseffekt hinzu */
-}
-
-/* Optional: Keyframe-Animation entfernt für Kürze */
-
-            
-        .image-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 10px 0;
-        }
-        
-        .image-gallery img {
-            flex-basis: calc(33% - 20px); 
-            margin: 10px;
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
-        }
-
-
-
-
-        .carousel-images img {
-    width: 100%;
-    height: auto;
-    object-fit: cover; 
-    display: block;
-}
-
-.carousel {
-    max-width: 600px; 
-    margin: auto; 
-    overflow: hidden;
-}
-
-.carousel-images {
-    display: flex; 
-    flex-wrap: nowrap; 
-    width: 100%;
-    height: 400px; 
-}
-
-.carousel-images img:first-child {
-    display: block;
-}
-
-button.prev, button.next {
-    cursor: pointer;
-    position: relative; 
-    top: 0; 
-    transform: translateY(0); 
-    margin: 10px;
-    background-color: rgba(0,0,0,0.5);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    z-index: 100;
-}
-
-.carousel-controls {
-    text-align: center; 
-}
-
-.carousel .prev, .carousel .next {
-    display: inline-block; 
-}
-
-
-        
-
-.carousel-controls button {
-    cursor: pointer;
-    top: auto;
-    bottom: 10px; 
-    transform: translateX(-50%);
-    background-color: rgba(0,0,0,0.5); 
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 18px; 
-    border-radius: 50%; 
-    transition: background-color 0.3s ease; 
-}
-
-
-.zoo-title {
-    color: #d52b1e; 
-    margin-bottom: 20px; 
-}
-
-
-
-
-.video-carousel .carousel-images video {
-    width: 100%; 
-    max-height: 500px; 
-    object-fit: cover; 
-}
-
-.video-container {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    overflow: hidden; 
-    height: 500px; 
-}
-
-.carousel.video-carousel {
-    max-width: 800px; 
-    margin: auto; 
-}
-
-
-.content-section, .carousel-section {
-    margin: 20px 0;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.content-title {
-    color: #d52b1e; 
-    margin-bottom: 20px;
-}
-
-
-
-.weihnachtsaktion-title {
-    color: #d52b1e; 
-    margin-bottom: 20px; 
-}
-
-.weihnachtsaktion {
-    background-color: #ffffff; 
-    padding: 20px; 
-    margin: 20px 0; 
-    border-radius: 8px; 
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
-}
-
-
-.weihnachtsbilder {
-    display: flex;
-    justify-content: center; 
-    gap: 10px; 
-    flex-wrap: wrap; 
-    margin-top: 20px; 
-}
-
-.weihnachtsbilder img {
-    width: 24%;
-    max-width: 150px; 
-    height: auto; 
-    border-radius: 4px; 
-}
-
-
-
-
-.osteraktion-title {
-    color: #d52b1e; 
-    margin-bottom: 20px; 
-}
-
-.osteraktion {
-    background-color: #ffffff; 
-    padding: 20px; 
-    margin: 20px 0; 
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.osterbilder {
-    display: flex;
-    justify-content: center;
-    gap: 10px; 
-    margin-top: 20px; 
-}
-
-.osterbilder img {
-    width: 100%; 
-    max-width: 600px;
-    height: auto; 
-    border-radius: 4px; 
-}
-
-
-.einsatzwagen-section {
-    margin: 20px 0;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.einsatzwagen-title {
-    color: #d52b1e; 
-    margin-bottom: 20px;
-}
-
-.video-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; 
-    gap: 20px;
-}
-
-.video-gallery video {
-    width: calc(50% - 10px); 
-    max-height: 300px;
-}
-
-.video-gallery video:last-child {
-    width: 100%; 
-    max-height: 500px; 
-}
-
-
-
-
-/* Modal-Stil */
-.modal {
-  display: none; /* Versteckt das Fenster standardmäßig */
-  position: fixed; /* Bleibt an der Stelle, auch beim Scrollen */
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto; /* Bei Bedarf ein Scrollbar */
-  background-color: rgb(0,0,0); /* Hintergrundfarbe */
-  background-color: rgba(0,0,0,0.4); /* Schwarz mit Opazität */
-  z-index: 1; /* Stellt sicher, dass es über anderen Inhalten liegt */
-}
-
-/* Modal-Inhalt */
-.modal-content {
-  background-color: #e90505;
-  margin: 15% auto; /* 15% vom oberen und automatischer Seitenrand */
-  padding: 20px;
-  border: 1px solid #fff;
-  width: 80%; /* Kann angepasst werden */
-  z-index: 2;
-  color: #fff;
-}
-
-
-
-
-
-        input[type=text], input[type=date], input[type=tel], input[type=email], select, textarea {
-                width: 95%; 
-                padding: 12px 20px; 
-                margin: 8px 0; 
-                display: inline-block; 
-                border: 1px solid #ccc; 
-                border-radius: 4px; 
-                box-sizing: border-box; 
-            }
-            
-        </style>
+        <link rel="stylesheet" href="styles-Aktivitäten.css">  
     </head>
     <body>
         <nav>
-            <h1>DRK</h1>
-            <a href="Home.html">Zurück zur Hauptseite</a>
+            <h1><a href="Home.html">DRK</a></h1>
+         
         </nav>
 
         <div class="header">
@@ -378,10 +33,13 @@ button.prev, button.next {
 
 
 
-    <button onclick="openPopup()">Für Aktivitäten anmelden</button>
+    <button class="btn"  onclick="openPopup()">Für Aktivitäten anmelden</button>
 
     <div id="anmeldePopup" class="popup">
+        <span class="close" onclick="closeModal()">&times;</span>
+
         <h2>Anmeldeformular</h2>
+        
         <form>
             <input type="text" id="name" name="name" placeholder="Vorname">
             <input type="text" id="nachname" name="nachname" placeholder="Nachname">
@@ -410,7 +68,7 @@ button.prev, button.next {
                 <input type="checkbox" id="datenschutz" name="datenschutz">
                 <label for="datenschutz">Ich stimme den Datenschutzrichtlinien zu</label>
             </div>
-            <button type="button" onclick="submitForm()">Bestätigen</button>
+            <button  id="btnb" type="button" onclick="submitForm()">Bestätigen</button>
         </form>
         
     </div>
@@ -554,11 +212,6 @@ button.prev, button.next {
                     <source src="Bilder/2.mp4" type="video/mp4">
                     Ihr Browser unterstützt das Video-Tag nicht.
                 </video>
-                <video controls>
-                    <source src="Bilder/3.mp4" type="video/mp4">
-                    Ihr Browser unterstützt das Video-Tag nicht.
-                </video>
-            </div>
         </section>
         
 
@@ -578,70 +231,7 @@ button.prev, button.next {
       <p>Danke für die Anmeldung. Wir werden uns bald bei Ihnen melden.</p>
     </div>
   </div>
-  
-
-
-
-
-
-
-        <script>
-            function openPopup() {
-                document.getElementById("anmeldePopup").style.display = "block";
-            }
-            function submitForm() {
-    var datenschutz = document.getElementById("datenschutz").checked;
-    if (!datenschutz) {
-        alert("Bitte akzeptieren Sie die Datenschutzrichtlinien.");
-        return;
-    }
-
-    var dankesFenster = document.getElementById("dankesFenster");
-    dankesFenster.style.display = "block";
-
-    setTimeout(function() {
-        dankesFenster.style.display = "none";
-    }, 1000);
-
-    document.getElementById("anmeldePopup").style.display = "none";
-}
-
-
-    let slideIndex = 0;
-
-function changeSlide(step) {
-    const slides = document.querySelectorAll('.carousel-images img');
-    slideIndex = (slideIndex + step + slides.length) % slides.length;
-    slides.forEach(slide => slide.style.display = 'none');
-    slides[slideIndex].style.display = 'block';
-}
-
-
-let videoSlideIndex = 0; 
-
-function showVideoSlide(index) {
-    const videos = document.querySelectorAll('.video-container video');
-    if (index >= videos.length) videoSlideIndex = 0; 
-    if (index < 0) videoSlideIndex = videos.length - 1; 
-
-    videos.forEach(video => {
-        video.style.display = 'none';
-    });
-
-    videos[videoSlideIndex].style.display = 'block';
-}
-
-function changeSlideVideo(step) {
-    showVideoSlide(videoSlideIndex += step);
-}
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    showVideoSlide(videoSlideIndex); 
-});
-
-
-
-
+        <script src="Aktivitäten.js"> 
         </script>
     </body>
     </html>

@@ -4,7 +4,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: #a8a5a5;
 }
 .container, .modal-content {
     background: white;
@@ -18,11 +18,18 @@ body {
     text-align: center;
     padding: 20px;
 }
-.header, .modal-header {
-    background-color: #d52b1e;
+ .modal-header {
+    background-color: #ff1808;
     color: white;
+    border-radius: 30px ;
 }
 
+.header{
+
+background-color: #ff1808;
+color: white;
+
+}
 .modal {
     display: none;
     position: fixed;
@@ -42,7 +49,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .close {
-    color: #aaa;
+    color: #000000;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -108,7 +115,11 @@ nav a {
     padding: 12px; 
     margin: 8px 0; 
     box-sizing: border-box; 
-    font-size: 16px; 
+    font-size: 20px; 
+    
+    color: black;
+    background-color: rgb(255, 255, 255);
+    box-shadow: #b0241e 5px 5px 5px 5px;
 }
 
 .modal-button {
@@ -145,3 +156,27 @@ nav a {
             background-color: #d52b1e;
             color: white;
         }
+
+
+#openModal {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    border-radius: 50px;
+    box-shadow: #000000 5px 5px 5px 0px;
+}
+
+#openModal:hover {
+    background-color: #000000;
+    color: tomato;
+}
+
+.h1 {
+    
+   font-size: 40px;
+   
+}
