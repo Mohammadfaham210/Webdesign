@@ -7,17 +7,15 @@
     <link rel="stylesheet" href="styles-Spende.css">
 </head>
 <body>
-    <!-- Navigationsbereich -->
     <nav>
         <h1>DRK</h1>
-        <a href="DRK22.html">Hauptseite</a>
+        <a href="Home.html">Zurück zur Hauptseite</a>
     </nav>
 
     <div class="hero-section">
         <div class="hero-text">Helfen Sie uns, Leben zu retten</div>
     </div>
 
-    <!-- Hauptinhalt Container -->
     <div class="container">
         <h1>Spenden für das Deutsche Rote Kreuz</h1>
         <p>Ihre Unterstützung ermöglicht es uns, in Krisenzeiten schnell und effektiv zu helfen.</p>
@@ -32,14 +30,15 @@
             <input type="text" id="iban" name="iban" placeholder="IBAN" required>
             <input type="text" id="bic" name="bic" placeholder="BIC" required>
     
-            <button type="submit">Jetzt spenden</button>
-        </form>
+            <button id="spendenButton" type="button">Jetzt spenden</button>
+            <div id="dankesNachricht" style="display: none;">Danke für deine Spende!</div>
+                    </form>
     </div>
 
-    <!-- Footer -->
     <div class="footer">
         <p>Vielen Dank für Ihre Großzügigkeit und Unterstützung!</p>
     </div>
+    <script src="spende.js"></script>
 </body>
 
 

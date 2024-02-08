@@ -2,7 +2,7 @@ body {
     background-size: conover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center ; /* Zentriert das Bild */
+    background-position: center ; 
    position : relative;
     
 
@@ -15,32 +15,31 @@ h1 {
     font-weight: bold;
 }
 .main-header {
-    list-style: none; /* Entfernt die Listensymbole */
-    padding: 0; /* Entfernt den Standardabstand */
-    display: flex; /* Ausrichtung der Elemente nebeneinander */
-    justify-content: space-around; /* Gleichmäßiger Abstand zwischen den Elementen */
+    list-style: none; 
+    padding: 0; 
+    display: flex; 
+    justify-content: space-around; 
 }
 
 .main-header li {
-    margin: 0; /* Entfernt den Standardabstand der Listenelemente */
+    margin: 0; 
 }
 
 .main-header a {
-    display: inline-block; /* Ermöglicht die Anwendung von Padding und Margin */
-    padding: 10px 20px; /* Abstand innen */
-    background-color: #f71515; /* Hintergrundfarbe */
-    color: white; /* Textfarbe */
-    text-decoration: none; /* Entfernt die Unterstreichung */
-    border-radius: 5px; /* Abgerundete Ecken */
-    transition: background-color 0.3s; /* Weiche Übergänge bei der Farbänderung */
+    display: inline-block; 
+    padding: 10px 20px;
+    background-color: #f71515; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    transition: background-color 0.3s;
 }
 
 .main-header a:hover {
-    background-color: #050a0f; /* Ändert die Hintergrundfarbe beim Überfahren mit der Maus */
-    color: rgb(245, 6, 6); /* Textfarbe */
+    background-color: #050a0f; 
+    color: rgb(245, 6, 6); 
 }
 
-/* Suchfunktion */
 #search-container {
     position: absolute;
     top: 20px;
@@ -58,31 +57,29 @@ h1 {
     font-size: 16px;
 }
 .highlight {
-    background-color: yellow; /* Hervorhebungsfarbe */
+    background-color: yellow; 
 }
 #search-results {
     margin-top: 10px;
-    font-weight: bold; /* Fett anzeigen */
-    font-size: 20px; /* Größe anpassen */
+    font-weight: bold; 
+    font-size: 20px; 
 }
 .error {
-    color: red; /* Rote Farbe für Fehlermeldungen */
+    color: red; 
 }
 
 
-/* Slideshow container */
 .slideshow-container {
     max-width: 1000px;
     position: relative;
     margin: auto;
   }
   
-  /* Hide the images by default */
+  
   .mySlides {
     display: none;
   }
   
-  /* Next & previous buttons */
   .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -98,18 +95,15 @@ h1 {
     user-select: none;
   }
   
-  /* Position the "next button" to the right */
   .next {
     right: 0;
     border-radius: 3px 0 0 3px;
   }
   
-  /* On hover, add a black background color with a little bit see-through */
   .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
   }
   
-  /* Fading animation */
   .fade {
     animation-name: fade;
     animation-duration: 1.5s;
@@ -120,7 +114,6 @@ h1 {
     to {opacity: 1}
   }
   
-  /* The dots/bullets/indicators */
   .dot {
     cursor: pointer;
     height: 15px;
@@ -144,72 +137,72 @@ h1 {
     width: 100%;
     position: relative;
     margin: auto;
-    overflow: hidden; /* Verhindert Überlauf von Bildern */
+    overflow: hidden; 
   }
   
   .mySlides {
     display: none;
     width: 100%;
-    height: 500px; /* Höhe des Bildes festlegen */
+    height: 500px;
   }
   
   .mySlides img {
     width: 100%;
-    height: 500px; /* Höhe des Bildes festlegen */
-    object-fit: cover; /* Stellt sicher, dass das Bild den Container vollständig bedeckt */
+    height: 500px; 
+    object-fit: cover; 
   }
   
 
 
   #about-us-section {
-    background-color: #f9f9f9; /* Hintergrundfarbe für den Abschnitt */
-    border: 1px solid #ddd; /* Rahmen um den Abschnitt */
-    border-radius: 4px; /* Leicht abgerundete Ecken */
-    padding: 20px; /* Innenabstand */
-    margin: 20px 0; /* Abstand oben und unten */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtiler Schatten für Tiefe */
-    position: relative; /* Für die Positionierung des Logos */
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd; 
+    border-radius: 4px; 
+    padding: 20px; 
+    margin: 20px 0; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    position: relative; 
 
 }
 
 #about-us-section h2 {
-    color: red; /* Rote Farbe für den Titel */
-    margin-bottom: 15px; /* Abstand unter dem Titel */
+    color: red; 
+    margin-bottom: 15px; 
 }
 
 .about-us-content p {
-    margin-bottom: 10px; /* Abstand zwischen den Absätzen */
-    line-height: 1.6; /* Zeilenhöhe für bessere Lesbarkeit */
-    padding-right: 120px; /* Platz auf der rechten Seite für das Logo */
+    margin-bottom: 10px; 
+    line-height: 1.6; 
+    padding-right: 120px; 
 
 }
 
 .about-us-logo {
-    position: absolute; /* Absolute Positionierung innerhalb des Abschnitts */
-    right: 20px; /* Rechtsbündig mit Abstand zum Rand */
-    top: 20px; /* Abstand vom oberen Rand */
-    width: 150px; /* Oder jede andere Größe, die Sie wünschen */
+    position: absolute; 
+    right: 20px; 
+    top: 20px; 
+    width: 150px;
 }
 
 .about-us-image {
-    width: 80%; /* Oder die gewünschte Breite */
-    height: auto; /* Beibehaltung des Seitenverhältnisses */
-    display: block; /* Verhindert, dass es als Inline-Element dargestellt wird */
-    margin-top: 20px; /* Abstand zum Text oben */
+    width: 80%; 
+    height: auto; 
+    display: block; 
+    margin-top: 20px; 
 }
 
 
 
 #first-aid-course {
-    background-color: #ffffff; /* oder eine andere Hintergrundfarbe Ihrer Wahl */
+    background-color: #ffffff;
     padding: 20px;
     margin-top: 20px;
-    border-radius: 4px; /* Falls gewünscht, können Sie hier abgerundete Ecken hinzufügen */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional, für einen leichten Schatten */
+    border-radius: 4px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
 }
 
 #first-aid-course h2 {
-    color: #d12323; /* Die Farbe kann an Ihr Design angepasst werden */
+    color: #d12323; 
     margin-bottom: 15px;
 }
 
@@ -220,18 +213,17 @@ h1 {
 
 
 
-/* Flexbox-Container für die Bilder */
 .slideshow-container-first-aid {
-  display: flex; /* Aktiviert Flexbox */
-  justify-content: center; /* Zentriert die Inhalte horizontal */
-  align-items: center; /* Zentriert die Inhalte vertikal */
-  gap: 10px; /* Fügt Abstand zwischen den Bildern hinzu */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px; 
 }
 
 .mySlidesFirstAid img {
-  width: calc(33.33% - 20px); /* Weist jedem Bild ein Drittel der Breite des Containers zu, abzüglich des Abstands */
-  height: auto; /* Passt die Höhe automatisch an, um das Seitenverhältnis zu bewahren */
-  object-fit: cover; /* Stellt sicher, dass das Bild den zugewiesenen Bereich bedeckt, ohne seine Proportionen zu verzerren */
+  width: calc(33.33% - 20px);
+  height: auto; 
+  object-fit: cover; 
 }
 
 
